@@ -8,9 +8,9 @@
 
 int _tmain(int argc, _TCHAR* argv[]) 
 {
-    const unsigned int nMaxOctDigits = (unsigned int)(floor(log2(UINT32_MAX)/3));
-    unsigned int nOctPower = 1;
-    unsigned int nDecNum = 0;
+    const unsigned int nMaxOctDigits = (unsigned int)(ceil(log2(UINT32_MAX) / 3));
+    long long nOctPower = 1L;
+    long long nDecNum = 0L;
     char szLine1[256], szLine2[256];
     size_t nStrLen1, nStrLen2;
     bool bIsRightString = false;
@@ -36,7 +36,7 @@ int _tmain(int argc, _TCHAR* argv[])
     }
     printf
     (
-    	"The decimal equivalent of the octal number %s is %d\r\n",
+    	"The decimal equivalent of the octal number %s is %lld\r\n",
         szLine1, nDecNum
     );
     getchar();
